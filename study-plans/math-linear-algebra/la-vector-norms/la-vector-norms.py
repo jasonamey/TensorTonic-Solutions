@@ -11,5 +11,9 @@ def vector_norms(v: list) -> np.ndarray:
     L2 = np.linalg.norm(v_arr)
     L3 = np.max(v_abs)
 
-    return np.array((L1,L2,L3))
+    out = np.empty(3,dtype=np.float64)
+
+    out[0], out[1], out[2] = L1, L2, L3 
+
+    return out
     
