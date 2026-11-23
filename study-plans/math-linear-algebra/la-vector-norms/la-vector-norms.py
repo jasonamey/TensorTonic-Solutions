@@ -8,7 +8,7 @@ def vector_norms(v: list) -> np.ndarray:
     v_abs = np.abs(v_arr)
     
     L1 = np.sum(v_abs)
-    L2 = np.linalg.norm(v_arr)
+    L2 = np.sqrt(v_arr @ v_arr)
     L3 = np.max(v_abs)
 
     out = np.empty(3,dtype=np.float64)
